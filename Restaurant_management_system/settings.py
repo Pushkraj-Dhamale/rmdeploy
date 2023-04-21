@@ -26,7 +26,9 @@ SECRET_KEY = 'hz8(ou+a7kq72y2@$*w1uhmo)dy_g++9lul1p*+mw%=jgw5(5f'
 DEBUG = True
 
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://untidy-railway-production.up.railway.app/'
+]
 ALLOWED_HOSTS = ['*']
 
 
@@ -53,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CSRF_COOKIE_DOMAIN='https://untidy-railway-production.up.railway.app/'
+
 ROOT_URLCONF = 'Restaurant_management_system.urls'
 
 TEMPLATES = [
