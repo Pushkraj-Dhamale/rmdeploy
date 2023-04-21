@@ -136,7 +136,7 @@ def productView(request, myid):
     # print(product)
     return render(request, 'shop/prodView.html', {'product': product[0]})
 
-@csrf_exempt
+
 def handeLogin(request):
     if request.method == "POST":
         # Get the post parameters
@@ -147,10 +147,10 @@ def handeLogin(request):
         if user is not None:
             login(request, user)
             messages.success(request, "Successfully Logged In")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+            return HttpResponseRedirect(request.META.get('HTTPS_REFERER'))
         else:
             messages.warning(request, "Invalid credentials! Please try again")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+            return HttpResponseRedirect(request.META.get('HTTPS_REFERER'))
 
     return HttpResponse("404- Not found")
 
