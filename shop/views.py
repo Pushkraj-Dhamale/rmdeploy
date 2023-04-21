@@ -136,7 +136,7 @@ def productView(request, myid):
     # print(product)
     return render(request, 'shop/prodView.html', {'product': product[0]})
 
-
+@csrf_exempt
 def handeLogin(request):
     if request.method == "POST":
         # Get the post parameters
