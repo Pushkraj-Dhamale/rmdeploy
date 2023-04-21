@@ -26,7 +26,7 @@ SECRET_KEY = 'hz8(ou+a7kq72y2@$*w1uhmo)dy_g++9lul1p*+mw%=jgw5(5f'
 DEBUG = True
 
 
-CSRF_TRUSTED_ORIGINS = ['*']
+
 ALLOWED_HOSTS = ['*']
 
 
