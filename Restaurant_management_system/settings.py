@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+CSRF_COOKIE_DOMAIN='https://untidy-railway-production.up.railway.app/'
 ROOT_URLCONF = 'Restaurant_management_system.urls'
 
 TEMPLATES = [
