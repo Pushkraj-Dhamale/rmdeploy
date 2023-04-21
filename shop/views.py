@@ -169,12 +169,12 @@ def handleSignUp(request):
         # check for errorneous input
         if (password1 != password):
             messages.warning(request, " Passwords do not match")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+            return HttpResponseRedirect(request.META.get('HTTPS_REFERER'))
 
         try:
             user = User.objects.get(username=username)
             messages.warning(request, " Username Already taken. Try with different Username.")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+            return HttpResponseRedirect(request.META.get('HTTPS_REFERER'))
         except User.DoesNotExist:
             # Create the user
             myuser = User.objects.create_user(username=username, email=email, password=password)
@@ -183,7 +183,7 @@ def handleSignUp(request):
             myuser.phone = phone
             myuser.save()
             messages.success(request, " Your Account has been successfully created")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+            return HttpResponseRedirect(request.META.get('HTTPS_REFERER'))
     else:
         return HttpResponse("404 - Not found")
 
@@ -191,7 +191,7 @@ def handleSignUp(request):
 def handleLogout(request):
     logout(request)
     messages.success(request, "Successfully logged out")
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return HttpResponseRedirect(request.META.get('HTTPS_REFERER'))
 
 
 @csrf_exempt
