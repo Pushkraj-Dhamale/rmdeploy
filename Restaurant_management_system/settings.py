@@ -30,7 +30,7 @@ DEBUG = True
 
 CSRF_TRUSTED_ORIGINS= ['https://untidy-railway-production.up.railway.app/'],
 ALLOWED_HOSTS = ['*'],
-CORS_ORIGIN_WHITELIST = ['https://untidy-railway-production.up.railway.app/']
+CORS_ORIGIN_WHITELIST = ['https://untidy-railway-production.up.railway.app/',]
 
 
 # Application definition
