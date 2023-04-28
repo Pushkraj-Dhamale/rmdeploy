@@ -28,9 +28,9 @@ SECRET_KEY = 'hz8(ou+a7kq72y2@$*w1uhmo)dy_g++9lul1p*+mw%=jgw5(5f'
 DEBUG = True
 
 
-CSRF_TRUSTED_ORIGINS= ['https://bharaticafe.up.railway.app/']
+CSRF_TRUSTED_ORIGINS= ['https://untidy-railway-production.up.railway.app/']
 ALLOWED_HOSTS = ['*']
-CORS_ORIGIN_WHITELIST = ['https://bharaticafe.up.railway.app/']
+CORS_ORIGIN_WHITELIST = ['https://untidy-railway-production.up.railway.app/']
 
 
 # Application definition
